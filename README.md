@@ -2,6 +2,8 @@
 
 ## About
 
+The goal of this project is to predict the employment salary based on the data provided by [Tax Administration of Kosovo](https://www.atk-ks.org/en/open-data/).
+
 ### Phase 1
 
 ## Instructions
