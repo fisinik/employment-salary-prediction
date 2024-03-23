@@ -15,3 +15,17 @@ Install kernel for the environment by running the following command in the termi
 ```bash
 pip install ipykernel
 ```
+
+Install the necessary packages.
+
+```bash
+pip install -r requirements.txt
+```
+
+### Dimension reduction (remove age groups)
+
+### agregim
+
+Te rename jemi tu i hek komplet average wage, unverified gender, total number of employees.
+
+permes grupeve t moshave femer/mashkull e agregojim number of employees
