@@ -64,11 +64,29 @@ The goal of this project is to predict the male/female employment salary based o
 - "Mesat. Fem.
   Prosecni F. Average F." <strong>(numerical continuous)</strong>
 
+#### Data integration
+
+Our dataset is separated based on years of employment data on 5 CSV (Comma Separated Values) files. The files can be found on the link provided on the about section. Using pandas python package we have read and concatinated the 5 csv files into one dataframe "employment_combined".
+
 #### Dataset Size
 
-Our dataset is separated based on years of employment data on 5 CSV (Comma Separated Values) files. The files can be found on the link provided on the about section.
+The resulting dataframe consists of <strong>88014 rows</strong> spaned through 5 years divided into <strong>27 attributes</strong> as described above.
 
-Using pandas python package we have read and concatinated the 5 csv files into one dataframe "employment_combined". The resulting dataframe consists of <strong>88014 rows</strong> spaned through 5 years divided into <strong>27 attributes</strong> as described above.
+#### Null values
+
+![Null Values](null-values.png)
+
+### Dimension reduction and agreggation
+
+Since the attributes are described in three languages, for simplicity's sake we have changed the column names to the corresponding English representation.
+
+Noticing how columns "Men" and "Women" don't have an accurate summary of the age group columns, we have dropped the Men, Women columns and have added the accurate summaries from the age group columns.
+
+Furthermore, columns such as Number of Taxpayers, Primary, Secondary, Unverified, Average wage, have been removed in the context of our objectives stated in the about section.
+
+#### Discretization of "Registration Status" and "Sector Description"
+
+As seen on the preprocessing file, we notice that column "Registration Status" has 30 unique string values whereas 'Sector Description' has 22 unique string values. We have created two new columns "Registration Id" and "Sector Id" to apply discretization of these columns.
 
 ## Instructions
 
