@@ -8,7 +8,7 @@
 - <strong>Subject (1st year): </strong>Machine Learning taught by [Prof. Dr. Eng. Lule Ahmedi](https://staff.uni-pr.edu/profile/luleahmedi) and [PhD. c Mërgim Hoti](https://staff.uni-pr.edu/profile/m%C3%ABrgimhoti)
 - <strong>Students:</strong> [Festina Qorrolli](https://github.com/festinaqorrolli) and [Fisnik Spahija](https://github.com/Fisinik/)
 
-The goal of this project is to predict the male/female employment salary based on the data provided by [Tax Administration of Kosovo](https://www.atk-ks.org/en/open-data/). This project is used for the Machine Learning course in University of Prishtina, Computer and Software Engineering.
+The goal of this [project](https://github.com/fisinik/employment-salary-prediction) is to predict the male/female employment salary based on the data provided by [Tax Administration of Kosovo](https://www.atk-ks.org/en/open-data/). This project is used for the Machine Learning course in University of Prishtina, Computer and Software Engineering.
 
 ## Phase 1 (Preparing the model)
 
@@ -84,9 +84,33 @@ Noticing how columns "Men" and "Women" don't have an accurate summary of the age
 
 Furthermore, columns such as Number of Taxpayers, Primary, Secondary, Unverified, Average wage, have been removed in the context of our objectives stated in the about section.
 
-#### Discretization of "Registration Status" and "Sector Description"
+After these modifications our dataframe consists of the following columns:
 
-As seen on the preprocessing file, we notice that column "Registration Status" has 30 unique string values whereas 'Sector Description' has 22 unique string values. We have created two new columns "Registration Id" and "Sector Id" to apply discretization of these columns.
+- Year <strong>(categorical ordinal)</strong>
+- Month <strong>(categorical ordinal)</strong>
+- Month-Year <strong>(categorical ordinal)</strong>
+- Sector Description <strong>(categorical nominal)</strong>
+- Registration Status <strong>(categorical nominal)</strong>
+- Municipality <strong>(categorical nominal)</strong>
+- Number of Employees <strong>(numerical discrete)</strong>
+- Men <strong>(numerical discrete)</strong>
+- Women <strong>(numerical discrete)</strong>
+- Average Wage Men <strong>(numerical continuous)</strong>
+- Average Wage Women <strong>(numerical continuous)</strong>
+
+![Dataframe information after dimension reduction and agreggation](dimension-reduction-and-aggregation.png)
+
+### Data cleaning
+
+By default values in columns "Average Wage Men" and "Average Wage Women" are NaN if there isn't a male/female employee in that instance. Therefore we fill these columns where values are missing with zeros only if the corresponding Men/Women column has zero value also.
+
+After cleaning these columns our dataset consists of <strong>70611 cleaned rows</strong>.
+
+### Discretization of "Registration Status" and "Sector Description"
+
+As seen on the preprocessing file, we notice that column "Registration Status" has <strong>30 unique string values</strong> whereas 'Sector Description' has <strong>22 unique string values</strong>. We have created two new columns "Registration Id" and "Sector Id" to apply discretization of these columns.
+
+![Discretization](discretization.png)
 
 ## Instructions
 
