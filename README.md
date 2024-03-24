@@ -90,7 +90,7 @@ The resulting dataframe consists of <strong>88014 rows</strong> spaned through 5
 
 #### Null values
 
-![Null Values](null-values.png)
+![Null Values](images/null-values.png)
 
 ### Dimension reduction and agreggation
 
@@ -114,7 +114,7 @@ After these modifications our dataframe consists of the following columns:
 - Average Wage Men <strong>(numerical continuous)</strong>
 - Average Wage Women <strong>(numerical continuous)</strong>
 
-![Dataframe information after dimension reduction and agreggation](dimension-reduction-and-aggregation.png)
+![Dataframe information after dimension reduction and agreggation](images/dimension-reduction-and-aggregation.png)
 
 ### Data cleaning
 
@@ -126,43 +126,43 @@ After cleaning these columns our dataset consists of <strong>70611 cleaned rows<
 
 As seen on the preprocessing file, we notice that column "Registration Status" has <strong>30 unique string values</strong> whereas 'Sector Description' has <strong>22 unique string values</strong>. We have created two new columns "Registration Id" and "Sector Id" to apply discretization of these columns.
 
-![Discretization](discretization.png)
+![Discretization](images/discretization.png)
 
 ### Anomaly Detection
 
 Identifying anomalies can provide valuable insights into the data, below we can see the detection of them:
 
-![Before Anomaly Detection](boxplot_before_anomaly_detection.png)
+![Before Anomaly Detection](images/boxplot_before_anomaly_detection.png)
 
 After applying Isolation Forest we can see the results clearly indicate a more consistent distribution.
 
-![After Anomaly Detection](boxplot_after_anomaly_detection.png)
+![After Anomaly Detection](images/boxplot_after_anomaly_detection.png)
 
 We can see that Isolation Forest hasn't completely helped us counter the anomalies therefore we also use z-score to remove the remaining.
 
-![After Z-Score Detection](boxplot_after_zscore_detection.png)
+![After Z-Score Detection](images/boxplot_after_zscore_detection.png)
 
 ### Data Skewness
 
 Based on the data skewness we can see that the skewness is positive.
 
-![Data Skewness](data-skewness.png)
+![Data Skewness](images/data-skewness.png)
 
 Based on skewness we can deduct that most people earn less than the average wage, with a smaller number of people earning much higher.
 
-![Data Skewness](histogram_average_wage.png)
+![Data Skewness](images/histogram_average_wage.png)
 
 ### Correlation Matrix
 
 Representation of correlation between attributes.
 
-![Correlation Matrix](correlation_matrix.png)
+![Correlation Matrix](images/correlation_matrix.png)
 
 ### SMOTE Algorithm
 
 With SMOTE Algorithm we generate synthetic samples from the minority class (in this case where female wages are greater than male wages) to balance the dataset. This creates a more unbiased predictability performance.
 
-![Smote Algorithm](smote.png)
+![Smote Algorithm](images/smote.png)
 
 ### Splitting dataset into training and testing data
 
