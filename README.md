@@ -112,6 +112,54 @@ As seen on the preprocessing file, we notice that column "Registration Status" h
 
 ![Discretization](discretization.png)
 
+### Anomaly Detection
+
+Identifying anomalies can provide valuable insights into the data, below we can see the detection of them:
+
+![Before Anomaly Detection](boxplot_before_anomaly_detection.png)
+
+After applying Isolation Forest we can see the results clearly indicate a more consistent distribution.
+
+![After Anomaly Detection](boxplot_after_anomaly_detection.png)
+
+We can see that Isolation Forest hasn't completely helped us counter the anomalies therefore we also use z-score to remove the remaining.
+
+![After Z-Score Detection](boxplot_after_zscore_detection.png)
+
+### Data Skewness
+
+Based on the data skewness we can see that the skewness is positive.
+
+![Data Skewness](data-skewness.png)
+
+Based on skewness we can deduct that most people earn less than the average wage, with a smaller number of people earning much higher.
+
+![Data Skewness](histogram_average_wage.png)
+
+### Correlation Matrix
+
+Representation of correlation between attributes.
+
+![Correlation Matrix](correlation_matrix.png)
+
+### Splitting dataset into training and testing data
+
+Attributes we consider on using for training model are:
+
+- Sector Description
+- Registration Status
+- Municipality
+- Average Wage Men
+- Average Wage Women
+
+Training set consists of <strong>42656 rows</strong>.
+Testing set consists of <strong>18282 rows</strong>.
+
+The files for testing and training can be found in /dataset:
+
+- /dataset/testing_set.csv
+- /dataset/training_set.csv
+
 ## Instructions
 
 This project requires venv environment. This can be done by creating a workspace environment through VScode. Make sure python and pip are installed.
