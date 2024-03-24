@@ -10,6 +10,22 @@
 
 The goal of this [project](https://github.com/fisinik/employment-salary-prediction) is to predict the male/female employment salary based on the data provided by [Tax Administration of Kosovo](https://www.atk-ks.org/en/open-data/). This project is used for the Machine Learning course in University of Prishtina, Computer and Software Engineering.
 
+## Instructions
+
+This project requires venv environment. This can be done by creating a workspace environment through VScode. Make sure python and pip are installed.
+
+Install kernel for the environment by running the following command in the terminal:
+
+```bash
+pip install ipykernel
+```
+
+Install the necessary packages.
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Phase 1 (Preparing the model)
 
 ### Dataset overview
@@ -142,6 +158,12 @@ Representation of correlation between attributes.
 
 ![Correlation Matrix](correlation_matrix.png)
 
+### SMOTE Algorithm
+
+With SMOTE Algorithm we generate synthetic samples from the minority class (in this case where female wages are greater than male wages) to balance the dataset. This creates a more unbiased predictability performance.
+
+![Smote Algorithm](smote.png)
+
 ### Splitting dataset into training and testing data
 
 Attributes we consider on using for training model are:
@@ -153,25 +175,10 @@ Attributes we consider on using for training model are:
 - Average Wage Women
 
 Training set consists of <strong>42656 rows</strong>.
+
 Testing set consists of <strong>18282 rows</strong>.
 
 The files for testing and training can be found in /dataset:
 
 - /dataset/testing_set.csv
 - /dataset/training_set.csv
-
-## Instructions
-
-This project requires venv environment. This can be done by creating a workspace environment through VScode. Make sure python and pip are installed.
-
-Install kernel for the environment by running the following command in the terminal:
-
-```bash
-pip install ipykernel
-```
-
-Install the necessary packages.
-
-```bash
-pip install -r requirements.txt
-```
