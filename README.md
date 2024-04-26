@@ -186,7 +186,7 @@ The files for testing and training can be found in /dataset:
 
 
  ---------------------------------------------------------------------------------------------------
-### Phase 2
+### Phase 2 (Training the model)
 
 During training, the model learns patterns on the data related to the target variable.
 It is therefore essential to analyze and compare the performance of the model against other algorithms to determine if further additional optimizations are needed.
@@ -455,3 +455,5 @@ Recall: 0.765519494663472</br>
 Precision: 0.7381077391578285</br>
 F1 Score: 0.7515637530072173</br>
 
+
+*** Phase 3
