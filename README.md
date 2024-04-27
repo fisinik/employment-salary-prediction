@@ -209,6 +209,8 @@ We will analyze the training results of 4 different algorithms which are:
   
 * Gradient Boosting Classifier  (mundesi largimi)
 
+We will also evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using metrics like Accuracy, F1-score, Recall, and Precision.
+
 By applying the Random Forest Classifier algorithm:
 
 
@@ -455,5 +457,5 @@ Recall: 0.765519494663472</br>
 Precision: 0.7381077391578285</br>
 F1 Score: 0.7515637530072173</br>
 
-
-*** Phase 3
+ 
+### Phase 3
