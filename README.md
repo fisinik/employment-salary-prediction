@@ -183,279 +183,84 @@ The files for testing and training can be found in /dataset:
 - /dataset/testing_set.csv
 - /dataset/training_set.csv
 
-
-
- ---------------------------------------------------------------------------------------------------
 ### Phase 2 (Training the model)
 
 During training, the model learns patterns on the data related to the target variable.
 It is therefore essential to analyze and compare the performance of the model against other algorithms to determine if further additional optimizations are needed.
 
-We will analyze the training results of 4 different algorithms which are:
+We will analyze the training results of 7 different algorithms which are:
+
+- Deep Learning
+- Logistic Regression
+- Decision Tree Classifier
+- Random Forest Classifier
+- Support Vector Machine
+- K Neighbors
+- Gradient Boosting Classifier
+
+We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using metrics like Accuracy, F1-score, Recall, and Precision.
+
+### Deep Learning
+
+| Ratio | Accuracy | Recall | Precision | F1 Score |
+| ----- | -------- | ------ | --------- | -------- |
+| 40/60 | 0.721    | 0.706  | 0.730     | 0.718    |
+| 30/70 | 0.726    | 0.807  | 0.696     | 0.747    |
+| 20/80 | 0.720    | 0.801  | 0.691     | 0.742    |
+| 10/90 | 0.714    | 0.720  | 0.712     | 0.716    |
+
+### Logistic Regression
+
+| Ratio | Accuracy | Recall | Precision | F1 Score |
+| ----- | -------- | ------ | --------- | -------- |
+| 40/60 | 0.647    | 0.669  | 0.642     | 0.655    |
+| 30/70 | 0.647    | 0.669  | 0.642     | 0.655    |
+| 20/80 | 0.647    | 0.669  | 0.642     | 0.655    |
+| 10/90 | 0.647    | 0.669  | 0.642     | 0.655    |
+
+### Decision Tree Classifier
+
+| Ratio | Accuracy | Recall | Precision | F1 Score |
+| ----- | -------- | ------ | --------- | -------- |
+| 40/60 | 0.882    | 0.867  | 0.895     | 0.881    |
+| 30/70 | 0.882    | 0.867  | 0.895     | 0.881    |
+| 20/80 | 0.882    | 0.867  | 0.895     | 0.881    |
+| 10/90 | 0.882    | 0.867  | 0.895     | 0.881    |
+
+### Random Forest Classifier
+
+| Ratio | Accuracy | Recall | Precision | F1 Score |
+| ----- | -------- | ------ | --------- | -------- |
+| 40/60 | 0.882    | 0.871  | 0.891     | 0.881    |
+| 30/70 | 0.881    | 0.872  | 0.889     | 0.880    |
+| 20/80 | 0.883    | 0.875  | 0.890     | 0.882    |
+| 10/90 | 0.883    | 0.874  | 0.890     | 0.882    |
+
+### Support Vector Machine
+
+| Ratio | Accuracy | Recall | Precision | F1 Score |
+| ----- | -------- | ------ | --------- | -------- |
+| 40/60 | 0.704    | 0.769  | 0.681     | 0.722    |
+| 30/70 | 0.704    | 0.769  | 0.681     | 0.722    |
+| 20/80 | 0.704    | 0.769  | 0.681     | 0.722    |
+| 10/90 | 0.704    | 0.769  | 0.681     | 0.722    |
+
+### K Neighbors
+
+| Ratio | Accuracy | Recall | Precision | F1 Score |
+| ----- | -------- | ------ | --------- | -------- |
+| 40/60 | 0.862    | 0.857  | 0.866     | 0.862    |
+| 30/70 | 0.862    | 0.857  | 0.866     | 0.862    |
+| 20/80 | 0.862    | 0.857  | 0.866     | 0.862    |
+| 10/90 | 0.862    | 0.857  | 0.866     | 0.862    |
+
+### Gradient Boosting Classifier
+
+| Ratio | Accuracy | Recall | Precision | F1 Score |
+| ----- | -------- | ------ | --------- | -------- |
+| 40/60 | 0.746    | 0.766  | 0.738     | 0.752    |
+| 30/70 | 0.746    | 0.766  | 0.738     | 0.752    |
+| 20/80 | 0.746    | 0.766  | 0.738     | 0.752    |
+| 10/90 | 0.746    | 0.766  | 0.738     | 0.752    |
 
-* Deep Learning  .. ... .. . .
-
-* Linear Regression
-  
-* Logistic Regression
-
-* Decision Tree Classifier
-
-* Random Forest Classifier
-
-* Support Vector Machine 
-
-* K Neighbors
-  
-* Gradient Boosting Classifier  (mundesi largimi)
-
-We will also evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using metrics like Accuracy, F1-score, Recall, and Precision.
-
-By applying the Random Forest Classifier algorithm:
-
-
-
-- Case I
-
-The ratio of test and training data is 0.4 to 0.6
-
-* Deep Learning:</br>
-Test Accuracy: 0.7213634252548218</br>
-Test Recall: 0.7058374881744385</br>
-Test Precision: 0.7297601699829102</br>
-Test F1 Score: 0.7175994562872978</br>
-   
-
-* Linear Regression </br>
-Accuracy: 0.5015567815589665</br>
-Recall: 1.0</br>
-Precision: 0.5015567815589665</br>
-F1 Score: 0.6680490377969369</br>
-
-
-* Logistic Regression</br>
-Accuracy: 0.6470202654722237</br>
-Recall: 0.6693530821171858</br>
-Precision: 0.6420810697868784</br>
-F1 Score: 0.6554335075183961</br>
-
-* Decision Tree Classifier</br>
-Accuracy: 0.8821762167476921</br>
-Recall: 0.8673491614027445</br>
-Precision: 0.8945299337302033</br>
-F1 Score: 0.8807298866463921</br>
-
-* Random Forest Classifier</br>
-Accuracy: 0.8821215928333425</br>
-Recall: 0.8711609671095621</br>
-Precision: 0.8913527969690216</br>
-F1 Score: 0.8811412205331571</br>
-
-
-* Support Vector Machine </br>
-Accuracy: 0.7036106407385153</br>
-Recall: 0.7685689392289261</br>
-Precision: 0.6813091330372659</br>
-F1 Score: 0.7223132036847493</br>
-
-
-* K Neighbors</br>
-Accuracy: 0.8618561206096029</br>
-Recall: 0.8574384665650185</br>
-Precision: 0.8658308589024525</br>
-F1 Score: 0.8616142270861833</br>
-
-
-* Gradient Boosting Classifier  (mundesi largimi)</br>
-Accuracy: 0.7461626700169334</br>
-Recall: 0.765519494663472</br>
-Precision: 0.7381077391578285</br>
-F1 Score: 0.7515637530072173</br>
-
-
-
-- Case II
-
-The ratio of test and training data is 0.3 to 0.7
-
-* Deep Learning:</br>
-Test Accuracy: 0.7261703014373779 </br>
-Test Recall: 0.8073404431343079</br>
-Test Precision: 0.6955991387367249</br>
-Test F1 Score: 0.7473158419936375</br>
-   
-
-* Linear Regression </br>
-Accuracy: 0.5015567815589665</br>
-Recall: 1.0</br>
-Precision: 0.5015567815589665</br>
-F1 Score: 0.6680490377969369</br>
-
-
-* Logistic Regression</br>
-Accuracy: 0.6470202654722237</br>
-Recall: 0.6693530821171858</br>
-Precision: 0.6420810697868784</br>
-F1 Score: 0.6554335075183961</br>
-
-
-* Decision Tree Classifier</br>
-Accuracy: 0.8821762167476921</br>
-Recall: 0.8673491614027445</br>
-Precision: 0.8945299337302033</br>
-F1 Score: 0.8807298866463921</br>
-
-
-* Random Forest Classifier</br>
-Accuracy: 0.8812476102037472</br>
-Recall: 0.8722500544543672</br>
-Precision: 0.8889012208657048</br>
-F1 Score: 0.8804969217238346</br>
-
-
-* Support Vector Machine </br>
-Accuracy: 0.7036106407385153</br>
-Recall: 0.7685689392289261</br>
-Precision: 0.6813091330372659</br>
-F1 Score: 0.7223132036847493</br>
-
-
-* K Neighbors</br>
-  Accuracy: 0.8618561206096029</br>
-Recall: 0.8574384665650185</br>
-Precision: 0.8658308589024525</br>
-F1 Score: 0.8616142270861833</br>
-
-
-* Gradient Boosting Classifier  (mundesi largimi)</br>
-Accuracy: 0.7461626700169334</br>
-Recall: 0.765519494663472</br>
-Precision: 0.7381077391578285</br>
-F1 Score: 0.7515637530072173</br>
-
-
-
-- Case III
-
-The ratio of test and training data is 0.2 to 0.8
-
-
-* Deep Learning:</br>
-Test Accuracy: 0.7202163338661194</br>
-Test Recall: 0.800805926322937</br>
-Test Precision: 0.6906819343566895</br>
-Test F1 Score: 0.7416783786642093</br>
-   
-
-* Linear Regression </br>
-Accuracy: 0.5015567815589665</br>
-Recall: 1.0</br>
-Precision: 0.5015567815589665</br>
-F1 Score: 0.6680490377969369</br>
-
-
-* Logistic Regression</br>
-Accuracy: 0.6470202654722237</br>
-Recall: 0.6693530821171858</br>
-Precision: 0.6420810697868784</br>
-F1 Score: 0.6554335075183961</br>
-
-
-* Decision Tree Classifier</br>
-Accuracy: 0.8821762167476921</br>
-Recall: 0.8673491614027445</br>
-Precision: 0.8945299337302033</br>
-F1 Score: 0.8807298866463921</br>
-
-
-* Random Forest Classifier</br>
-Accuracy: 0.882940951548588</br>
-Recall: 0.8747549553474189</br>
-Precision: 0.889972299168975</br>
-F1 Score: 0.8822980172461141</br>
-
-
-* Support Vector Machine </br>
-Accuracy: 0.7036106407385153</br>
-Recall: 0.7685689392289261</br>
-Precision: 0.6813091330372659</br>
-F1 Score: 0.7223132036847493</br>
-
-
-* K Neighbors</br>
-Accuracy: 0.8618561206096029</br>
-Recall: 0.8574384665650185</br>
-Precision: 0.8658308589024525</br>
-F1 Score: 0.8616142270861833</br>
-
-
-* Gradient Boosting Classifier  (mundesi largimi)</br>
-Accuracy: 0.7461626700169334</br>
-Recall: 0.765519494663472</br>
-Precision: 0.7381077391578285</br>
-F1 Score: 0.7515637530072173</br>
-
-
-
-- Case IV
-
-The ratio of test and training data is 0.1 to 0.9
-
-
-* Deep Learning:</br>
-Test Accuracy: 0.7136068344116211</br>
-Test Recall: 0.7198867201805115</br>
-Test Precision: 0.7122077345848083</br>
-Test F1 Score: 0.7160265897686742</br>
-   
-
-* Linear Regression </br>
-Accuracy: 0.5015567815589665</br>
-Recall: 1.0</br>
-Precision: 0.5015567815589665</br>
-F1 Score: 0.6680490377969369</br>
-
-
-* Logistic Regression</br>
-Accuracy: 0.6470202654722237</br>
-Recall: 0.6693530821171858</br>
-Precision: 0.6420810697868784</br>
-F1 Score: 0.6554335075183961</br>
-
-
-* Decision Tree Classifier</br>
-Accuracy: 0.8821762167476921</br>
-Recall: 0.8673491614027445</br>
-Precision: 0.8945299337302033</br>
-F1 Score: 0.8807298866463921</br>
-
-
-* Random Forest Classifier</br>
-Accuracy: 0.88255858414814</br>
-Recall: 0.8742104116750163</br>
-Precision: 0.8897140323653292</br>
-F1 Score: 0.8818940892111624</br>
-
-
-* Support Vector Machine </br>
-Accuracy: 0.7036106407385153</br>
-Recall: 0.7685689392289261</br>
-Precision: 0.6813091330372659</br>
-F1 Score: 0.7223132036847493</br>
-
-
-* K Neighbors</br>
-Accuracy: 0.8618561206096029</br>
-Recall: 0.8574384665650185</br>
-Precision: 0.8658308589024525</br>
-F1 Score: 0.8616142270861833</br>
-
-
-* Gradient Boosting Classifier  (mundesi largimi)</br>
-Accuracy: 0.7461626700169334</br>
-Recall: 0.765519494663472</br>
-Precision: 0.7381077391578285</br>
-F1 Score: 0.7515637530072173</br>
-
- 
 ### Phase 3
