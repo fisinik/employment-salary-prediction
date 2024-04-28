@@ -210,6 +210,11 @@ We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using 
 
 ### Neural Network
 
+    Accuracy: Ranges from approximately 0.714 to 0.726 across different test ratios.
+    Recall: Varies from around 0.706 to 0.807, indicating the proportion of actual positives correctly identified.
+    Precision: Ranges from about 0.691 to 0.730, representing the proportion of predicted positives that are correct.
+    F1 Score: Varies from approximately 0.716 to 0.747, which is the harmonic mean of precision and recall.
+
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
 | 40/60 | 0.721    | 0.706  | 0.730     | 0.718    |
@@ -218,6 +223,8 @@ We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using 
 | 10/90 | 0.714    | 0.720  | 0.712     | 0.716    |
 
 ### Logistic Regression
+
+Performance: Consistently shows accuracy, recall, precision, and F1 scores around 0.647 across different test ratios, indicating stable but relatively lower performance compared to other models.
 
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
@@ -228,6 +235,8 @@ We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using 
 
 ### Decision Tree Classifier
 
+Accuracy, Recall, Precision, F1 Score: Both models perform consistently well across different test ratios, with accuracy around 0.882 and other metrics like recall, precision, and F1 score around 0.867 to 0.895, indicating good overall performance.
+
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
 | 40/60 | 0.882    | 0.867  | 0.895     | 0.881    |
@@ -236,6 +245,8 @@ We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using 
 | 10/90 | 0.882    | 0.867  | 0.895     | 0.881    |
 
 ### Random Forest Classifier
+
+Performance: SVM and K Neighbors show similar performance metrics across different test ratios, with accuracy around 0.704 and other metrics like recall, precision, and F1 score around 0.681 to 0.769, indicating moderate performance.
 
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
@@ -263,6 +274,8 @@ We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using 
 | 10/90 | 0.862    | 0.857  | 0.866     | 0.862    |
 
 ### Gradient Boosting Classifier
+
+Performance: Shows moderate performance with accuracy around 0.746 and other metrics like recall, precision, and F1 score around 0.738 to 0.766 across different test ratios.
 
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
