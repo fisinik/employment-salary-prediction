@@ -190,7 +190,7 @@ It is therefore essential to analyze and compare the performance of the model ag
 
 We will analyze the training results of 7 different algorithms which are:
 
-- Deep Learning
+- Neural Network
 - Logistic Regression
 - Decision Tree Classifier
 - Random Forest Classifier
@@ -200,7 +200,15 @@ We will analyze the training results of 7 different algorithms which are:
 
 We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using metrics like Accuracy, F1-score, Recall, and Precision.
 
-### Deep Learning
+- Accuracy: It measures the overall correctness of a model by comparing the number of correct predictions to the total number of predictions made. Mathematically, accuracy is calculated as (TP + TN) / (TP + TN + FP + FN), where TP is True Positives, TN is True Negatives, FP is False Positives, and FN is False Negatives.
+
+- Recall (Sensitivity or True Positive Rate): It measures the ability of a model to correctly identify positive instances from all actual positive instances. It is calculated as TP / (TP + FN), where TP is True Positives and FN is False Negatives. High recall indicates that the model is good at minimizing false negatives.
+
+- Precision: It measures the accuracy of positive predictions made by the model. It is calculated as TP / (TP + FP), where TP is True Positives and FP is False Positives. Precision is important when the cost of false positives is high.
+
+- F1 Score: It is the harmonic mean of precision and recall, providing a balance between the two metrics. It is calculated as 2 _ (Precision _ Recall) / (Precision + Recall). F1 score is useful when there is an uneven class distribution, as it considers both false positives and false negatives.
+
+### Neural Network
 
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
