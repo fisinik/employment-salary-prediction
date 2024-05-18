@@ -208,7 +208,7 @@ We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using 
 
 - F1 Score: It is the harmonic mean of precision and recall, providing a balance between the two metrics. It is calculated as 2 _ (Precision _ Recall) / (Precision + Recall). F1 score is useful when there is an uneven class distribution, as it considers both false positives and false negatives.
 
-### Neural Network
+#### Neural Network
 
     Accuracy: Ranges from approximately 0.714 to 0.726 across different test ratios.
     Recall: Varies from around 0.706 to 0.807, indicating the proportion of actual positives correctly identified.
@@ -222,7 +222,7 @@ We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using 
 | 20/80 | 0.720    | 0.801  | 0.691     | 0.742    |
 | 10/90 | 0.714    | 0.720  | 0.712     | 0.716    |
 
-### Logistic Regression
+#### Logistic Regression
 
 Performance: Consistently shows accuracy, recall, precision, and F1 scores around 0.647 across different test ratios, indicating stable but relatively lower performance compared to other models.
 
@@ -233,7 +233,7 @@ Performance: Consistently shows accuracy, recall, precision, and F1 scores aroun
 | 20/80 | 0.647    | 0.669  | 0.642     | 0.655    |
 | 10/90 | 0.647    | 0.669  | 0.642     | 0.655    |
 
-### Decision Tree Classifier
+#### Decision Tree Classifier
 
 Accuracy, Recall, Precision, F1 Score: Both models perform consistently well across different test ratios, with accuracy around 0.882 and other metrics like recall, precision, and F1 score around 0.867 to 0.895, indicating good overall performance.
 
@@ -244,7 +244,7 @@ Accuracy, Recall, Precision, F1 Score: Both models perform consistently well acr
 | 20/80 | 0.882    | 0.867  | 0.895     | 0.881    |
 | 10/90 | 0.882    | 0.867  | 0.895     | 0.881    |
 
-### Random Forest Classifier
+#### Random Forest Classifier
 
 Performance: SVM and K Neighbors show similar performance metrics across different test ratios, with accuracy around 0.704 and other metrics like recall, precision, and F1 score around 0.681 to 0.769, indicating moderate performance.
 
@@ -255,7 +255,7 @@ Performance: SVM and K Neighbors show similar performance metrics across differe
 | 20/80 | 0.883    | 0.875  | 0.890     | 0.882    |
 | 10/90 | 0.883    | 0.874  | 0.890     | 0.882    |
 
-### Support Vector Machine
+#### Support Vector Machine
 
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
@@ -264,7 +264,7 @@ Performance: SVM and K Neighbors show similar performance metrics across differe
 | 20/80 | 0.704    | 0.769  | 0.681     | 0.722    |
 | 10/90 | 0.704    | 0.769  | 0.681     | 0.722    |
 
-### K Neighbors
+#### K Neighbors
 
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
@@ -273,7 +273,7 @@ Performance: SVM and K Neighbors show similar performance metrics across differe
 | 20/80 | 0.862    | 0.857  | 0.866     | 0.862    |
 | 10/90 | 0.862    | 0.857  | 0.866     | 0.862    |
 
-### Gradient Boosting Classifier
+#### Gradient Boosting Classifier
 
 Performance: Shows moderate performance with accuracy around 0.746 and other metrics like recall, precision, and F1 score around 0.738 to 0.766 across different test ratios.
 
@@ -284,4 +284,137 @@ Performance: Shows moderate performance with accuracy around 0.746 and other met
 | 20/80 | 0.746    | 0.766  | 0.738     | 0.752    |
 | 10/90 | 0.746    | 0.766  | 0.738     | 0.752    |
 
-### Phase 3
+### Phase 3 (Analysis and Evaluation)
+
+#### Neural Network
+
+- Accuracy increased significantly, reaching around 0.9713 to 0.9773.
+- Recall improved, now consistently high, around 0.9713 to 0.9773.
+- Precision saw substantial improvement, ranging from 0.9723 to 0.9775.
+- F1 Score also improved notably, with values now between 0.9716 to 0.9774.
+
+| Performance | Accuracy        | Recall          | Precision       | F1 Score        |
+| ----------- | --------------- | --------------- | --------------- | --------------- |
+| Initial     | 0.714 - 0.726   | 0.706 - 0.807   | 0.691 - 0.730   | 0.716 - 0.747   |
+| Optimized   | 0.9713 - 0.9773 | 0.9713 - 0.9773 | 0.9723 - 0.9775 | 0.9716 - 0.9774 |
+
+| Ratio | Accuracy           | Recall             | Precision          | F1 Score           |
+| ----- | ------------------ | ------------------ | ------------------ | ------------------ |
+| 40/60 | 0.9712832570075989 | 0.9712832294059731 | 0.9722647490420612 | 0.9715646480520717 |
+| 30/70 | 0.9773000478744507 | 0.977300076578055  | 0.9774782716295978 | 0.9773663995005927 |
+| 20/80 | 0.97489333152771   | 0.9748933377092222 | 0.9756684549996559 | 0.9751025475532312 |
+| 10/90 | 0.9732523560523987 | 0.9732523793895635 | 0.9737151190851275 | 0.973239009894511  |
+
+#### Logistic Regression
+
+- Accuracy improved dramatically to around 0.9979 - 0.9983.
+- Recall increased significantly, now in the range of 0.9801 to 0.9877.
+- Precision improved, ranging from 0.9847 to 0.9879.
+- F1 Score saw substantial improvement, now between 0.9834 to 0.9864.
+
+| Performance | Accuracy        | Recall          | Precision       | F1 Score        |
+| ----------- | --------------- | --------------- | --------------- | --------------- |
+| Initial     | 0.647           | 0.669           | 0.642           | 0.655           |
+| Optimized   | 0.9979 - 0.9983 | 0.9801 - 0.9877 | 0.9847 - 0.9879 | 0.9834 - 0.9864 |
+
+| Ratio | Accuracy           | Recall             | Precision          | F1 Score           |
+| ----- | ------------------ | ------------------ | ------------------ | ------------------ |
+| 40/60 | 0.9981949458483754 | 0.9841479524438573 | 0.9867549668874173 | 0.9854497354497355 |
+| 30/70 | 0.9983043430696861 | 0.9876651982378855 | 0.9850615114235501 | 0.9863616366036076 |
+| 20/80 | 0.9980308500164096 | 0.980106100795756  | 0.9879679144385026 | 0.9840213049267643 |
+| 10/90 | 0.9978667541844437 | 0.9821428571428571 | 0.9846547314578005 | 0.983397190293742  |
+
+#### Decision Tree Classifier
+
+- Accuracy improved significantly, reaching around 0.9975 to 0.9980.
+- Recall saw a notable increase, now between 0.9775 to 0.9949.
+- Precision improved to around 0.9750 to 0.9854.
+- F1 Score increased, now ranging from 0.9801 to 0.9848.
+
+| Performance | Accuracy        | Recall          | Precision       | F1 Score        |
+| ----------- | --------------- | --------------- | --------------- | --------------- |
+| Initial     | 0.882           | 0.867           | 0.895           | 0.881           |
+| Optimized   | 0.9975 - 0.9980 | 0.9775 - 0.9949 | 0.9750 - 0.9854 | 0.9801 - 0.9848 |
+
+| Ratio | Accuracy           | Recall             | Precision          | F1 Score           |
+| ----- | ------------------ | ------------------ | ------------------ | ------------------ |
+| 40/60 | 0.9980308500164096 | 0.9828269484808454 | 0.9854304635761589 | 0.984126984126984  |
+| 30/70 | 0.9977573569631332 | 0.9814977973568282 | 0.982363315696649  | 0.9819303657999118 |
+| 20/80 | 0.997538562520512  | 0.9774535809018567 | 0.9826666666666667 | 0.9800531914893618 |
+| 10/90 | 0.9980308500164096 | 0.9948979591836735 | 0.975              | 0.984848484848485  |
+
+#### Random Forest Classifier
+
+- Accuracy saw significant improvement, now around 0.9943 to 0.9947.
+- Recall increased notably, ranging from 0.9346 to 0.9541.
+- Precision improved, now between 0.9624 to 0.9725.
+- F1 Score saw substantial improvement, reaching around 0.9532 to 0.9590.
+
+| Performance | Accuracy        | Recall          | Precision       | F1 Score        |
+| ----------- | --------------- | --------------- | --------------- | --------------- |
+| Initial     | 0.881 - 0.883   | 0.871 - 0.875   | 0.889 - 0.891   | 0.880 - 0.882   |
+| Optimized   | 0.9943 - 0.9947 | 0.9346 - 0.9541 | 0.9624 - 0.9725 | 0.9532 - 0.9590 |
+
+| Ratio | Accuracy           | Recall             | Precision          | F1 Score           |
+| ----- | ------------------ | ------------------ | ------------------ | ------------------ |
+| 40/60 | 0.9942976698391861 | 0.9346103038309115 | 0.9725085910652921 | 0.9531828898619065 |
+| 30/70 | 0.9945848375451264 | 0.9418502202643172 | 0.97005444646098   | 0.9557443004023245 |
+| 20/80 | 0.9945848375451264 | 0.9496021220159151 | 0.9623655913978495 | 0.9559412550066756 |
+| 10/90 | 0.9947489333770922 | 0.9540816326530612 | 0.9639175257731959 | 0.958974358974359  |
+
+#### Support Vector Machine
+
+- Accuracy improved dramatically, now around 0.9891 to 0.9926.
+- Recall increased significantly, ranging from 0.8851 to 0.9388.
+- Precision saw a substantial improvement, now between 0.9358 to 0.9460.
+- F1 Score improved notably, reaching around 0.9097 to 0.9424.
+
+| Performance | Accuracy        | Recall          | Precision       | F1 Score        |
+| ----------- | --------------- | --------------- | --------------- | --------------- |
+| Initial     | 0.704           | 0.769           | 0.681           | 0.722           |
+| Optimized   | 0.9891 - 0.9926 | 0.8851 - 0.9388 | 0.9358 - 0.9460 | 0.9097 - 0.9424 |
+
+| Ratio | Accuracy           | Recall             | Precision          | F1 Score           |
+| ----- | ------------------ | ------------------ | ------------------ | ------------------ |
+| 40/60 | 0.9890876271742698 | 0.8850726552179656 | 0.9357541899441341 | 0.9097080787508486 |
+| 30/70 | 0.9897166611968056 | 0.8951541850220265 | 0.936405529953917  | 0.9153153153153153 |
+| 20/80 | 0.991384968821792  | 0.9151193633952255 | 0.9439124487004104 | 0.9292929292929293 |
+| 10/90 | 0.992615687561536  | 0.9387755102040817 | 0.9460154241645244 | 0.942381562099872  |
+
+#### K Neighbors
+
+- Accuracy improved significantly, now around 0.9833 to 0.9872.
+- Recall increased, ranging from 0.8157 to 0.8852.
+- Precision saw an improvement, now between 0.9054 to 0.9132.
+- F1 Score improved notably, reaching around 0.8582 to 0.8990.
+
+| Performance | Accuracy        | Recall          | Precision       | F1 Score        |
+| ----------- | --------------- | --------------- | --------------- | --------------- |
+| Initial     | 0.862           | 0.857           | 0.866           | 0.862           |
+| Optimized   | 0.9833 - 0.9872 | 0.8157 - 0.8852 | 0.9054 - 0.9132 | 0.8582 - 0.8990 |
+
+| Ratio | Accuracy           | Recall             | Precision          | F1 Score           |
+| ----- | ------------------ | ------------------ | ------------------ | ------------------ |
+| 40/60 | 0.9832622251394815 | 0.8157199471598415 | 0.905425219941349  | 0.8582348853370396 |
+| 30/70 | 0.9849578820697954 | 0.8387665198237886 | 0.9118773946360154 | 0.8737953189536485 |
+| 20/80 | 0.9868723334427305 | 0.8673740053050398 | 0.9159663865546218 | 0.891008174386921  |
+| 10/90 | 0.9872005251066623 | 0.8852040816326531 | 0.9131578947368421 | 0.8989637305699482 |
+
+#### Gradient Boosting Classifier
+
+- Accuracy improved dramatically, now around 0.9972 to 0.9980.
+- Recall increased significantly, ranging from 0.9795 to 0.9828.
+- Precision saw substantial improvement, now between 0.9771 to 0.9880.
+- F1 Score improved notably, reaching around 0.9783 to 0.9841.
+
+| Performance | Accuracy        | Recall          | Precision       | F1 Score        |
+| ----------- | --------------- | --------------- | --------------- | --------------- |
+| Initial     | 0.746           | 0.766           | 0.738           | 0.752           |
+| Optimized   | 0.9972 - 0.9980 | 0.9795 - 0.9828 | 0.9771 - 0.9880 | 0.9783 - 0.9841 |
+
+| Ratio | Accuracy           | Recall             | Precision          | F1 Score           |
+| ----- | ------------------ | ------------------ | ------------------ | ------------------ |
+| 40/60 | 0.9979898260584181 | 0.9795244385733157 | 0.9880079946702198 | 0.9837479270315092 |
+| 30/70 | 0.9974291652992014 | 0.9779735682819384 | 0.980565371024735  | 0.9792677547419498 |
+| 20/80 | 0.9980308500164096 | 0.9827586206896551 | 0.9853723404255319 | 0.9840637450199203 |
+| 10/90 | 0.9972103708565803 | 0.9795918367346939 | 0.9770992366412213 | 0.9783439490445859 |
