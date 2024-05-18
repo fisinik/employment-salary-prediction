@@ -183,7 +183,7 @@ The files for testing and training can be found in /dataset:
 - /dataset/testing_set.csv
 - /dataset/training_set.csv
 
-### Phase 2 (Training the model)
+## Phase 2 (Training the model)
 
 During training, the model learns patterns on the data related to the target variable.
 It is therefore essential to analyze and compare the performance of the model against other algorithms to determine if further additional optimizations are needed.
@@ -208,7 +208,7 @@ We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using 
 
 - F1 Score: It is the harmonic mean of precision and recall, providing a balance between the two metrics. It is calculated as 2 _ (Precision _ Recall) / (Precision + Recall). F1 score is useful when there is an uneven class distribution, as it considers both false positives and false negatives.
 
-#### Neural Network
+### Neural Network
 
     Accuracy: Ranges from approximately 0.714 to 0.726 across different test ratios.
     Recall: Varies from around 0.706 to 0.807, indicating the proportion of actual positives correctly identified.
@@ -222,7 +222,7 @@ We will evaluate different data splits such as 40/60, 30/70, 20/80, 10/90 using 
 | 20/80 | 0.720    | 0.801  | 0.691     | 0.742    |
 | 10/90 | 0.714    | 0.720  | 0.712     | 0.716    |
 
-#### Logistic Regression
+### Logistic Regression
 
 Performance: Consistently shows accuracy, recall, precision, and F1 scores around 0.647 across different test ratios, indicating stable but relatively lower performance compared to other models.
 
@@ -233,7 +233,7 @@ Performance: Consistently shows accuracy, recall, precision, and F1 scores aroun
 | 20/80 | 0.647    | 0.669  | 0.642     | 0.655    |
 | 10/90 | 0.647    | 0.669  | 0.642     | 0.655    |
 
-#### Decision Tree Classifier
+### Decision Tree Classifier
 
 Accuracy, Recall, Precision, F1 Score: Both models perform consistently well across different test ratios, with accuracy around 0.882 and other metrics like recall, precision, and F1 score around 0.867 to 0.895, indicating good overall performance.
 
@@ -244,7 +244,7 @@ Accuracy, Recall, Precision, F1 Score: Both models perform consistently well acr
 | 20/80 | 0.882    | 0.867  | 0.895     | 0.881    |
 | 10/90 | 0.882    | 0.867  | 0.895     | 0.881    |
 
-#### Random Forest Classifier
+### Random Forest Classifier
 
 Performance: SVM and K Neighbors show similar performance metrics across different test ratios, with accuracy around 0.704 and other metrics like recall, precision, and F1 score around 0.681 to 0.769, indicating moderate performance.
 
@@ -255,7 +255,7 @@ Performance: SVM and K Neighbors show similar performance metrics across differe
 | 20/80 | 0.883    | 0.875  | 0.890     | 0.882    |
 | 10/90 | 0.883    | 0.874  | 0.890     | 0.882    |
 
-#### Support Vector Machine
+### Support Vector Machine
 
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
@@ -264,7 +264,7 @@ Performance: SVM and K Neighbors show similar performance metrics across differe
 | 20/80 | 0.704    | 0.769  | 0.681     | 0.722    |
 | 10/90 | 0.704    | 0.769  | 0.681     | 0.722    |
 
-#### K Neighbors
+### K Neighbors
 
 | Ratio | Accuracy | Recall | Precision | F1 Score |
 | ----- | -------- | ------ | --------- | -------- |
@@ -273,7 +273,7 @@ Performance: SVM and K Neighbors show similar performance metrics across differe
 | 20/80 | 0.862    | 0.857  | 0.866     | 0.862    |
 | 10/90 | 0.862    | 0.857  | 0.866     | 0.862    |
 
-#### Gradient Boosting Classifier
+### Gradient Boosting Classifier
 
 Performance: Shows moderate performance with accuracy around 0.746 and other metrics like recall, precision, and F1 score around 0.738 to 0.766 across different test ratios.
 
@@ -284,9 +284,20 @@ Performance: Shows moderate performance with accuracy around 0.746 and other met
 | 20/80 | 0.746    | 0.766  | 0.738     | 0.752    |
 | 10/90 | 0.746    | 0.766  | 0.738     | 0.752    |
 
-### Phase 3 (Analysis and Evaluation)
+## Phase 3 (Analysis and Evaluation)
 
-#### Neural Network
+All models were trained and evaluated using a consistent methodology, including data preprocessing steps such as one-hot encoding and standardization. The models were evaluated on various metrics to provide a comprehensive view of their performance.
+
+### Performance Metrics
+
+- Logistic Regression and Decision Tree Classifier showed excellent performance with high accuracy, recall, precision, and F1 scores across different train-test splits.
+- Random Forest Classifier also performed well, especially in terms of recall and F1 score, indicating its robustness.
+- Support Vector Machine and K-Neighbors showed relatively lower performance compared to the other models, although they still achieved reasonable accuracy and recall.
+- Gradient Boosting Classifier performed consistently across different splits, indicating its effectiveness in handling imbalanced data.
+
+### Neural Network
+
+A neural network is composed of layers of neurons, where each neuron applies a linear transformation followed by a non-linear activation function. The network learns by adjusting the weights through backpropagation to minimize the loss function. This model's strength is due to its' capability of capturing complex non-linear relationships and patterns in the data.
 
 - Accuracy increased significantly, reaching around 0.9713 to 0.9773.
 - Recall improved, now consistently high, around 0.9713 to 0.9773.
@@ -305,7 +316,9 @@ Performance: Shows moderate performance with accuracy around 0.746 and other met
 | 20/80 | 0.97489333152771   | 0.9748933377092222 | 0.9756684549996559 | 0.9751025475532312 |
 | 10/90 | 0.9732523560523987 | 0.9732523793895635 | 0.9737151190851275 | 0.973239009894511  |
 
-#### Logistic Regression
+### Logistic Regression
+
+A linear model that estimates the probability of a binary outcome using the logistic function. It calculates the log-odds of the outcome as a linear combination of the input features. It's simple, interpretable, and effective for binary classification tasks.
 
 - Accuracy improved dramatically to around 0.9979 - 0.9983.
 - Recall increased significantly, now in the range of 0.9801 to 0.9877.
@@ -324,7 +337,9 @@ Performance: Shows moderate performance with accuracy around 0.746 and other met
 | 20/80 | 0.9980308500164096 | 0.980106100795756  | 0.9879679144385026 | 0.9840213049267643 |
 | 10/90 | 0.9978667541844437 | 0.9821428571428571 | 0.9846547314578005 | 0.983397190293742  |
 
-#### Decision Tree Classifier
+### Decision Tree Classifier
+
+A tree structure where each node represents a feature, and branches represent decisions based on the feature's value. The tree splits the data recursively to minimize impurity. Easy to interpret and understand, handles both numerical and categorical data well.
 
 - Accuracy improved significantly, reaching around 0.9975 to 0.9980.
 - Recall saw a notable increase, now between 0.9775 to 0.9949.
@@ -343,7 +358,9 @@ Performance: Shows moderate performance with accuracy around 0.746 and other met
 | 20/80 | 0.997538562520512  | 0.9774535809018567 | 0.9826666666666667 | 0.9800531914893618 |
 | 10/90 | 0.9980308500164096 | 0.9948979591836735 | 0.975              | 0.984848484848485  |
 
-#### Random Forest Classifier
+### Random Forest Classifier
+
+An ensemble of decision trees where each tree is trained on a random subset of the data. The final prediction is made by averaging the predictions of all trees. Reduces overfitting, robust to noise, and provides high accuracy.
 
 - Accuracy saw significant improvement, now around 0.9943 to 0.9947.
 - Recall increased notably, ranging from 0.9346 to 0.9541.
@@ -362,7 +379,9 @@ Performance: Shows moderate performance with accuracy around 0.746 and other met
 | 20/80 | 0.9945848375451264 | 0.9496021220159151 | 0.9623655913978495 | 0.9559412550066756 |
 | 10/90 | 0.9947489333770922 | 0.9540816326530612 | 0.9639175257731959 | 0.958974358974359  |
 
-#### Support Vector Machine
+### Support Vector Machine
+
+Finds the optimal hyperplane that maximizes the margin between different classes. SVM can be extended to non-linear classification using kernel functions. Effective in high-dimensional spaces, robust to overfitting in low-dimensional space.
 
 - Accuracy improved dramatically, now around 0.9891 to 0.9926.
 - Recall increased significantly, ranging from 0.8851 to 0.9388.
@@ -381,7 +400,9 @@ Performance: Shows moderate performance with accuracy around 0.746 and other met
 | 20/80 | 0.991384968821792  | 0.9151193633952255 | 0.9439124487004104 | 0.9292929292929293 |
 | 10/90 | 0.992615687561536  | 0.9387755102040817 | 0.9460154241645244 | 0.942381562099872  |
 
-#### K Neighbors
+### K Neighbors
+
+Classifies a data point based on the majority class among its k-nearest neighbors in the feature space. Simple and intuitive, effective with well-separated classes.
 
 - Accuracy improved significantly, now around 0.9833 to 0.9872.
 - Recall increased, ranging from 0.8157 to 0.8852.
@@ -400,7 +421,9 @@ Performance: Shows moderate performance with accuracy around 0.746 and other met
 | 20/80 | 0.9868723334427305 | 0.8673740053050398 | 0.9159663865546218 | 0.891008174386921  |
 | 10/90 | 0.9872005251066623 | 0.8852040816326531 | 0.9131578947368421 | 0.8989637305699482 |
 
-#### Gradient Boosting Classifier
+### Gradient Boosting Classifier
+
+An ensemble method that builds models sequentially, where each new model corrects the errors of the previous ones. It uses a gradient descent algorithm to minimize the loss. Powerful for both regression and classification tasks, capable of capturing complex patterns and relationships.
 
 - Accuracy improved dramatically, now around 0.9972 to 0.9980.
 - Recall increased significantly, ranging from 0.9795 to 0.9828.
@@ -418,3 +441,7 @@ Performance: Shows moderate performance with accuracy around 0.746 and other met
 | 30/70 | 0.9974291652992014 | 0.9779735682819384 | 0.980565371024735  | 0.9792677547419498 |
 | 20/80 | 0.9980308500164096 | 0.9827586206896551 | 0.9853723404255319 | 0.9840637450199203 |
 | 10/90 | 0.9972103708565803 | 0.9795918367346939 | 0.9770992366412213 | 0.9783439490445859 |
+
+### Conclusion
+
+The optimization process resulted in substantial improvements across all machine learning models, highlighting the importance of fine-tuning and parameter adjustments. Logistic Regression and Gradient Boosting Classifier, in particular, achieved exemplary performance metrics, making them the preferred choices for this prediction task. Decision Tree and Random Forest Classifiers also demonstrated reliable and robust performance, suitable for scenarios requiring high accuracy and interpretability. Support Vector Machine and K Neighbors, although improved, might be considered for specific contexts where their unique advantages apply.
